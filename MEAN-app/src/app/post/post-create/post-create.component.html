@@ -1,0 +1,27 @@
+<mat-card>
+  <form (submit)="onAdd(AddForm)" #AddForm="ngForm">
+    <a mat-button class="go" routerLink="/">Go to Home Page</a>
+    <mat-form-field>
+      <input matInput type="text" [ngModel]="post?.FullName"  name="FullName" placeholder="Fullname" #fullname="ngModel" required>
+      <mat-error *ngIf="fullname.invalid">please enter a  name!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput [ngModel]="post?.RegisterNo" name="RegisterNo" placeholder="RegisterNo" #registerno="ngModel" required>
+        <mat-error *ngIf="registerno.invalid">please enter a valid RegisterNo!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput [ngModel]="post?.Department" name="Department" placeholder="Department" #Department="ngModel" required>
+        <mat-error *ngIf="Department.invalid">please enter a Department!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput [ngModel]="post?.Year" name="Year" placeholder="year of Studying" #Year="ngModel" required>
+        <mat-error *ngIf="Year.invalid">please enter a year of Studying!</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput [ngModel]="post?.EnteringTime" name="EnteringTime" placeholder="EnteringTime" #EnteringTime="ngModel" required>
+        <mat-error *ngIf="EnteringTime.invalid">please enter a present time! </mat-error>
+      </mat-form-field>
+      <button mat-raised-button  color='accent' type="submit">Submit</button>
+  </form>
+</mat-card>
+
