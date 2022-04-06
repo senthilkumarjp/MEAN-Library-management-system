@@ -1,0 +1,17 @@
+mat-card{
+  width:50%;
+  margin: auto;
+}
+
+mat-form-field,
+input{
+  width: 100%;
+}
+
+.go{
+  color: black;
+  background-color: lawngreen;
+  margin-left: 35%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
